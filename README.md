@@ -3,7 +3,7 @@
 ## Instalar Virtualbox y vagrant
 Para relizar esta práctica sera necesario instalar [Virtualbox](https://www.virtualbox.org/wiki/Downloads) y [vagrant](https://www.vagrantup.com/downloads.html) sobre el sistema operativo en el que vayamos a realizarla.
 
-## Crear Vagrantfile para cuatro box de ubuntu server 18.04 dos server apache Apache, un server Mysql y un server apache valanceador de carga
+## Crear Vagrantfile para cuatro box de ubuntu server 18.04 dos server apache Apache, un server Mysql y un server apache balanceador de carga
 
 Creamos un directorio donde contendremos las carpetas para nuestras maquinas virtuales en vagrant.
 -  mkdir VMvagrant
