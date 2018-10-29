@@ -101,7 +101,7 @@ end
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ~~~
 
-- Una vez realizada la modificación del archivo 000-default.conf procedemos a crear el scrip para el box "Vcarga"
+- Una vez realizada la modificación del archivo 000-default.conf procedemos a crear el script para el box "Vcarga"
 ~~~
 #!/bin/bash
 apt-get update
