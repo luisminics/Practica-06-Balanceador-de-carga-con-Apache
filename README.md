@@ -1,7 +1,8 @@
 # Practica-06-Balanceador-de-carga-con-Apache
 
 ## Instalar Virtualbox y vagrant
-Para relizar esta práctica sera necesario instalar [Virtualbox](https://www.virtualbox.org/wiki/Downloads) y [vagrant](https://www.vagrantup.com/downloads.html) sobre el sistema operativo en el que vayamos a realizarla.
+Para relizar esta práctica ser
+a necesario instalar [Virtualbox](https://www.virtualbox.org/wiki/Downloads) y [vagrant](https://www.vagrantup.com/downloads.html) sobre el sistema operativo en el que vayamos a realizarla.
 
 ## Crear Vagrantfile para cuatro box de ubuntu server 18.04 dos server apache Apache, un server Mysql y un server apache balanceador de carga
 
@@ -23,9 +24,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = "ubuntu/xenial64"
 
-  # Apache HTTP Server Valanceador de Carga
-  config.vm.define "VCarga" do |app|
-    app.vm.hostname = "VCarga"
+  # Apache HTTP Server Balanceador de Carga
+  config.vm.define "BCarga" do |app|
+    app.vm.hostname = "BCarga"
     app.vm.network "private_network", ip: "192.168.33.10"
     app.vm.provision "shell", path: "provision/provision-for-valancer.sh"
   end
@@ -53,9 +54,9 @@ Vagrant.configure("2") do |config|
 
 end
 ~~~
-## Crear script para realizar "provision" en Vm "VCarga"
+## Crear script para realizar "provision" en Vm "BCarga"
 
-- Antes de crear el scrip para el valanceador de carga crearemos el archivo 000-default.conf que posteriormente remplazaremos por el que se encuentra en la ruta /etc/apache2/sites-enabled/000-default.conf
+- Antes de crear el scrip para el balanceador de carga crearemos el archivo 000-default.conf que posteriormente remplazaremos por el que se encuentra en la ruta /etc/apache2/sites-enabled/000-default.conf
 ~~~
 <VirtualHost *:80>
 	# The ServerName directive sets the request scheme, hostname and port that
@@ -101,7 +102,7 @@ end
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ~~~
 
-- Una vez realizada la modificación del archivo 000-default.conf procedemos a crear el script para el box "Vcarga"
+- Una vez realizada la modificación del archivo 000-default.conf procedemos a crear el script para el box "Bcarga"
 ~~~
 #!/bin/bash
 apt-get update
