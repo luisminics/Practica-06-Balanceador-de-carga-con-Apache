@@ -55,7 +55,7 @@ end
 ~~~
 ## Crear script para realizar "provision" en Vm "VCarga"
 
-- Antes de crear el scrip para el valanceador de carga editaremos el archivo 000-default.conf en la ruta /etc/apache2/sites-enabled/000-default.conf
+- Antes de crear el scrip para el valanceador de carga crearemos el archivo 000-default.conf que posteriormente remplazaremos por el que se encuentra en la ruta /etc/apache2/sites-enabled/000-default.conf
 ~~~
 <VirtualHost *:80>
 	# The ServerName directive sets the request scheme, hostname and port that
