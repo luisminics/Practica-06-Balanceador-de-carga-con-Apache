@@ -177,13 +177,13 @@ mysql -u root mysql -p$DB_ROOT_PASSWD <<< "GRANT ALL PRIVILEGES ON *.* TO root@'
 
 - vagrant up web
 
-## Inicio de la maquina virtual "web"
+## Inicio de la maquina virtual "web2"
 
 - vagrant up web2
 
-## Inicio de la maquina virtual "web"
+## Inicio de la maquina virtual "BCarga"
 
-- vagrant up VCarga
+- vagrant up BCarga
 
 ## Repositorio github
 
